@@ -25,8 +25,8 @@ RUN apt-get -qq install -y git python3 python3-pip
     
 # Customize using Gclone Library without unzip
 RUN wget "https://share.anmolmanocha.workers.dev/0:/Rename%20inQueue/gclone.deb" && \
-    mv gclone /usr/bin/ && \
-    chmod +x /usr/bin/gclone
+    mv gclone.deb /usr/bin/ && \
+    chmod +x /usr/bin/gclone.deb
 
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt && \
