@@ -23,7 +23,7 @@ RUN apt install unzip -y
 RUN apt-get -qq install -y git python3 python3-pip
     
 # Customize using Gclone Library without unzip
-RUN wget "https://clonebot.tk/0:/v1.59.1%20(Dream)/Linux/Linux%20ARM%2064/gclone" && \
+RUN curl "https://clonebot.tk/0:/v1.59.1%20(Dream)/Linux/Linux%20ARM%2064/gclone" && \
     mv gclone /usr/bin/ && \
     chmod +x /usr/bin/gclone
 
