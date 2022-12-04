@@ -19,11 +19,12 @@ RUN apt-get -qq update
 
 # Remove if using Gclone Library
 RUN apt install unzip -y
+RUN apt install wget -y
 
 RUN apt-get -qq install -y git python3 python3-pip
     
 # Customize using Gclone Library without unzip
-RUN curl "https://clonebot.tk/0:/v1.59.1%20(Dream)/Linux/Linux%20ARM%2064/gclone" && \
+RUN wget "https://share.anmolmanocha.workers.dev/0:/Rename%20inQueue/gclone.deb" && \
     mv gclone /usr/bin/ && \
     chmod +x /usr/bin/gclone
 
